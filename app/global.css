@@ -1,0 +1,41 @@
+
+:root {
+  --blue: #4862b1;
+  --primary: #1b3070;
+  --paragraph: #49598d;
+  --secondary: #7683a9;
+  --tetriary: #a4acc6;
+  --background: #efeeeb;
+  --green: #8ac249;
+  --main-font: 14px;
+  --caption-font-size: 48px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  color: var(--paragraph);
+  background-color: var(--background);
+  font-size: var(--main-font);
+  font-family: var(--font-inter);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+address {
+  font-style: normal;
+}
+h1 {
+  font-size: 1em;
+}
