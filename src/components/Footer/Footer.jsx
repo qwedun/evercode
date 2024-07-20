@@ -1,26 +1,35 @@
+'use client'
 import styles from './footer.module.scss'
 import Link from "next/link";
 import Image from "next/image";
-import footerLogo from '@icons/logo-footer.svg';
+import footerLogo from '@icons/logo-footer.svg'
 import mediumImg from '@icons/social-medium.svg';
 import githubImg from '@icons/social-git.svg';
 import twitterImg from '@icons/social-tweet.svg';
 import facebookImg from '@icons/social-fb.svg';
 import linkedinImg from '@icons/social-in.svg';
+import { useState } from "react";
 
 const Footer = () => {
+
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <div className={styles.flex}>
-                    <Link href='/ru'>
+                <div className={`${styles.flex} ${styles.policy}`}>
+                    <Link className={styles.logo} href='/ru'>
                         <Image width={230} src={footerLogo} alt='На главную страницу'/>
                     </Link>
                     <Link href='/ru/privacy'>Политика конфеденциальности</Link>
                     <Link href='/ru/terms-of-use'>Правила использования сайта</Link>
                     <p>© 2013 - 2024 Evercode Lab</p>
                 </div>
-                <nav className={styles.flex}>
+                <div onClick={() => setIsActive(!isActive)} className={styles.enable}>
+                    Навигация
+                    <div>+</div>
+                </div>
+                <nav className={`${styles.flex} ${isActive ? styles.show : styles.hide}`}>
                     <h3 className={styles.title}>Навигация</h3>
                     <Link href='/ru/products'>Продукты</Link>
                     <Link href='/ru/cases'>Кейсы</Link>
@@ -28,7 +37,7 @@ const Footer = () => {
                     <Link href='/ru/blog'>Блог</Link>
                     <Link href='/ru/contacts'>Контакты</Link>
                 </nav>
-                <address className={styles.flex}>
+                <address className={`${styles.flex} ${styles.address}`}>
                     <h3 className={styles.title}>Контакты</h3>
                     <div className={styles.contacts}>
                         <a href="mailto:sales@evercodelab.com">sales@evercodelab.com</a>

@@ -1,7 +1,7 @@
 
 const Page = () => {
     return (
-        <div style={{overflowY: 'hidden', height: '100%', width: '100%'}}>
+        <div style={{position: 'absolute', top:0, overflowY: 'hidden', height: '100%', width: '100%', zIndex: 1000}}>
             <iframe src='/documents/ruTermsOfUse.pdf'
                     width='100%'
                     height='100%'

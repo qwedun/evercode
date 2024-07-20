@@ -1,7 +1,7 @@
 
 const Page = () => {
     return (
-        <div>
+        <div style={{height: '100vh'}}>
             Everchain SDK
         </div>
     );

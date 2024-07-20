@@ -23,6 +23,7 @@ body {
   background-color: var(--background);
   font-size: var(--main-font);
   font-family: var(--font-inter);
+  width: 100vw;
 }
 
 a {
@@ -36,6 +37,7 @@ ul {
 address {
   font-style: normal;
 }
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
+  font-family: var(--font-montserrat);
 }

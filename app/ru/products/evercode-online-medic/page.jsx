@@ -1,7 +1,7 @@
 
 const Page = () => {
     return (
-        <div>
+        <div style={{height: '100vh'}}>
             Evercode Online Medic
         </div>
     );
